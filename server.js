@@ -13,6 +13,6 @@ app.use(bodyParser.json());
 app.use('/users', userRoutes);
 
 sequelize.sync().then(() => {
-    console.log('Database connected and migrated');
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-}).catch(err => console.error('Database connection error:', err));
+    console.log('База данных подключена и перенесена');
+    app.listen(PORT, () => console.log(`Сервер работает на порту ${PORT}`));
+}).catch(err => console.error('Ошибка подключения к бд:', err));
